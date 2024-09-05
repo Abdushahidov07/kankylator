@@ -28,8 +28,13 @@ def dvichnakod(a):
         res = str(a % 2) + res
         a //= 2
     print("Ответ:",res)
+def factoriali(a):
+    cnt = 1
+    for i in range(1,a+1):
+        cnt*=i
+    print("Ответ:",cnt)
 while True:
-    n = int(input("1.Сложение\n2.Уменьшение\n3.Умножение\n4.Деление\n5.Корень\n6.Степень\n7.Двоичный кодирование числа\n8.Выход\nПожайлуста выбирите функцую: "))
+    n = int(input("1.Сложение\n2.Уменьшение\n3.Умножение\n4.Деление\n5.Корень\n6.Степень\n7.Двоичный кодирование числа\n8.Факториал\n9.Выход\nПожайлуста выбирите функцую: "))
     if n == 1:
         plus(int(input("Первое число: ")),int(input("Второе число: ")))
     elif n == 2:
@@ -45,6 +50,8 @@ while True:
     elif n == 7:
         dvichnakod(int(input("Вводите число: ")))
     elif n == 8:
+        factoriali(int(input("Вводите число: ")))
+    elif n == 9:
         print("Пока")
         break
     else:
